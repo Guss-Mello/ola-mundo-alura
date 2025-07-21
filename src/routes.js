@@ -4,9 +4,9 @@ import Inicio from "./paginas/inicio";
 import SobreMim from "./paginas/sobreMim";
 
 
-function App() {
+function AppRoutes() {
   return(
-    <BrowserRouter>
+    <BrowserRouter future={{v7_startTransition: true, v7_relativeSplatPath: true,}}> 
       <Menu />
 
       <Routes>
@@ -18,4 +18,4 @@ function App() {
   )
 }
 
-export default App;
+export default AppRoutes;
