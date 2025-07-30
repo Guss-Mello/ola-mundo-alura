@@ -3,6 +3,7 @@ import Menu from "./componentes/menu";
 import Inicio from "./paginas/inicio";
 import SobreMim from "./paginas/sobreMim";
 import Rodape from "componentes/rodape";
+import PagPadrao from "componentes/PagPadrao";
 
 
 function AppRoutes() {
@@ -11,8 +12,11 @@ function AppRoutes() {
       <Menu />
 
       <Routes>
-        <Route path="/" element={<Inicio />} />
-        <Route path="/sobremim" element={<SobreMim />} />
+        <Route path="/" element={<PagPadrao />}> 
+          <Route index element={<Inicio />} /> {/*aquele index é o mesmo que dizer que o caminho desta rota é igual ao da rota pai, ou seja, nesse caso é a mesma coisa que um atributo path="/"*/}
+          <Route path="sobremim" element={<SobreMim />} />
+        </Route>
+
         <Route path="*" element={<div>Pagina nao encontrada!</div>}/>
       </Routes>
 
