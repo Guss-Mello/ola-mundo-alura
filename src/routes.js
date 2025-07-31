@@ -17,9 +17,9 @@ function AppRoutes() {
         <Route path="/" element={<PagPadrao />}> 
           <Route index element={<Inicio />} /> {/*aquele index é o mesmo que dizer que o caminho desta rota é igual ao da rota pai, ou seja, nesse caso é a mesma coisa que um atributo path="/"*/}
           <Route path="sobremim" element={<SobreMim />} />
-          <Route path="posts/:id" element={<Post />} />
         </Route>
-
+        
+        <Route path="posts/:id" element={<Post />} />
         <Route path="*" element={<NaoEncontrada />}/>
       </Routes>
 
