@@ -6,11 +6,13 @@ import Rodape from "componentes/rodape";
 import PagPadrao from "componentes/PagPadrao";
 import Post from "paginas/post";
 import NaoEncontrada from 'paginas/naoEncontrada';
+import ScrollToTop from "componentes/ScrollToTop";
 
 
 function AppRoutes() {
   return(
-    <BrowserRouter future={{v7_startTransition: true, v7_relativeSplatPath: true,}}> 
+    <BrowserRouter future={{v7_startTransition: true, v7_relativeSplatPath: true,}}>
+      <ScrollToTop /> 
       <Menu />
 
       <Routes>
