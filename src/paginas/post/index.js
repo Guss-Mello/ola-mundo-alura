@@ -21,7 +21,7 @@ export default function Post(){
         return <NaoEncontrada />
     }
 
-    const postsRecomendados = posts
+    const PostsRecomendados = posts
         .filter((post) => post.id !== Number(parametros.id))
         .sort((a, b) => b.id - a.id)
         .slice(0, 4);
@@ -37,12 +37,12 @@ export default function Post(){
                             {post.texto}
                         </ReactMarkdown>
                         </div>
-                        
+
                         <h2 className={styles.tituloOutrosPosts}>
                             Outros posts que voce pode gostar: 
-                        </h2>
+                        </h2> 
                         <ul className={styles.postsRecomendados}>
-                            {postsRecomendados.map((post) => (
+                            {PostsRecomendados.map((post) => (
                                 <li key={post.id}>
                                     <PostCard post={post} />
                                 </li>
